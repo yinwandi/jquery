@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+      *{
+      	padding:0px;
+      	margin:0px;
+      }
+      .pic{
+      	width:210px;
+      	height:136px;
+        overflow:hidden;
+      }
+      .pic2{
+      	width:880px;
+      	height:136px;
+      }
+      .pic2 ul li{
+        list-style: none;
+      }
+      .pic ul li{
+      	float:left;
+      }
+      .button{
+      	width:130px;
+      	height:30px;
+      }
+      .button ul li{
+    	list-style: none;
+    	border:1px solid black;
+    	float:left;
+    	cursor:pointer;
+    	width:30px;
+
+    }
+	</style>
+</head>
+<body>
+	<div class="pic">
+		<div class="pic2">
+	       <ul>
+				<li><img src="images/0.jpg" alt=""></li>
+				<li><img src="images/1.jpg" alt=""></li>
+				<li><img src="images/2.jpg" alt=""></li>
+				<li><img src="images/3.jpg" alt=""></li>
+	       </ul>
+	     </div>
+	</div>
+	<div class="button">
+	 <ul>
+	 	<li>1</li>
+	 	<li>2</li>
+	 	<li>3</li>
+	 	<li>4</li>
+	 </ul>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+       $("ul li").click(function(){
+       	var index =$(this).index()
+       	$(".pic2").animate({"margin-left":index*-210},500)
+       })
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	.r li{
+		height:30px;
+		width:100px;
+		float:left;
+		text-align:center;
+		line-height: 30px;
+		list-style: none;
+		cursor: pointer;
+		border:1px solid red;
+	}
+	.clear{
+		clear:both;
+	}
+	.k{
+		width:300px;
+		height:400px;
+		border:1px solid red;
+	}
+	.k h1{
+		width:300px;
+		height:300px;
+		display: none;
+	}
+	.k .active{
+		display:inline;
+	}
+	</style>
+</head>
+<body>
+	<ul class="r">
+		<li>标题一</li>
+		<li>标题二</li>
+		<li>标题三</li>
+	</ul>
+	<div class="clear"></div>
+	<div class="k">
+
+		<h1 class="active">内容一</h1>
+		<h1>内容二</h1>
+		<h1>内容三</h1>
+		
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+	$(".r li").click(function(){
+		var index = $(this).index();
+		$(".k h1").eq(index).addClass("active").siblings().removeClass("active");
+	})
+	</script>
+</body>
+</html>

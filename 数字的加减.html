@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input class="but1" type="button" value="+">
+    <span class="num">0</span>
+	<input class="but2" type="button" value="-">
+</body>
+<script src="script/jquery.js"></script>
+<script>
+	$(".but1").click(function(){
+		  var add=Number($(".num").text());
+		  add=add+1;
+			$(".num").text(add);
+	 	
+		})
+	$(".but2").click(function(){
+            var sub=Number($(".num").text())
+            if(sub>0){
+            sub--;
+			$(".num").text(sub);}
+
+		})
+
+
+</script>
+</html>

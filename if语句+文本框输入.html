@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input class="txt1" type="text"> 
+        <input class="sign" type="text">
+		<input class="txt2" type="text"> =
+		<input class="txt" type="text">
+		<input class="but" type="button" value="计算">
+	</form>
+	<script src="script/jquery.js"></script>
+	<script> 
+	$(".but").click(function(){
+		  var tx1=$(".txt1").val();
+		  var tx2=$(".txt2").val();
+          var sign=$(".sign").val();
+          switch(sign){
+          	case "+": var txt=Number(tx1)+Number(tx2);break;
+          	case "-": var txt=Number(tx1)-Number(tx2);break;
+          	case "*": var txt=Number(tx1)*Number(tx2);break;
+          	case "/": var txt=Number(tx1)/Number(tx2);break;   
+
+          }
+          //两种方法，一种用switch，一种用if，用switch来判断更好
+       //    if(sign=="+"){
+       //    	 var txt=Number(tx1)+Number(tx2);
+       //    }
+	      // if(sign=="-"){
+       //    	 var txt=Number(tx1)-Number(tx2);
+       //    }
+       //    if(sign=="*"){
+       //    	 var txt=Number(tx1)*Number(tx2);
+       //    }
+       //    if(sign=="/"){
+       //    	 var txt=Number(tx1)/Number(tx2);
+       //    }
+	      $(".txt").val(txt);
+	})
+	 
+
+	</script>
+</body>
+</html>

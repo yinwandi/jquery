@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	  .dk{
+	  	width:600px;
+	  	height:500px;
+	  	border:1px solid red;
+	  }
+	  .t1,.t2,.t3{
+	  	width:198px;
+	  	height:30px;
+	  	border:1px solid red;
+	  	float:left;
+	  }
+	  .hk .you{
+	  	display:none;
+	  }
+	</style>
+</head>
+<body>
+	<div class="dk">
+			<div class="t1">标签一</div>
+			<div class="t2">标签二</div>
+			<div class="t3">标签三</div>
+		<div class="hk">
+			<h3>内容一</h3>
+			<h3 class="you">内容二</h3>
+			<h3 class="you">内容三</h3>
+		</div>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+	 $(".dk .t1,.t2,.t3").click(function(){
+	 	var index=$(this).index();
+	 	$(".dk .hk h3").eq(index).removeClass("you").siblings().addClass("you");
+	    
+	 })
+</script>
+</body>
+</html>
